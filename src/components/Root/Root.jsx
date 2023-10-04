@@ -7,7 +7,7 @@ const Root = () => {
     return (
         <div className='max-w-screen-xl mx-auto'> 
 
-            <Navbar></Navbar>
+            <Navbar ></Navbar>
             <Home></Home>
             <Cards></Cards>
 

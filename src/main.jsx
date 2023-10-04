@@ -9,6 +9,8 @@ import {
 import Root from './components/Root/Root';
 import Home from './components/Home/Home';
 import Cards from './components/Cards/Cards';
+import BigProviders from './providers/Bigproviders';
+import Sorting from './components/Sorting/Sorting';
 
 
 const router = createBrowserRouter([
@@ -22,10 +24,15 @@ const router = createBrowserRouter([
       },
       {
         path: '/category/:category_id',
-        element :<Cards></Cards>
+        element: <Cards></Cards>
+      },
+      {
+        path: '/category/:category_id',
+        element: <Sorting></Sorting>
+
       }
     ]
-   
+
   },
 
 ]);
@@ -33,6 +40,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   // eslint-disable-next-line react/jsx-no-undef
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BigProviders>
+      <RouterProvider router={router} />
+    </BigProviders>
+
   </React.StrictMode>,
 )

@@ -1,10 +1,14 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/jsx-key */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import {  NavLink } from "react-router-dom";
+import { BigContext } from "../../providers/Bigproviders";
 
 const Home = () => {
     const [videos, setVideos] = useState([]);
+
+    
 
     useEffect(() => {
         fetch("https://openapi.programming-hero.com/api/videos/categories")
@@ -20,7 +24,7 @@ const Home = () => {
 
 
     return (
-        <div className="text-center">
+        <div className="text-center border-[2px] border-blue-500 py-[20px]">
 
             
              
